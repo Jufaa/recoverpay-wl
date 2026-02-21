@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
     if (resend) {
       try {
         await resend.emails.send({
-          from: "RecoverPay Waitlist <waitlist@recoverpay.io>",
+          from: "RecoverPay waitlist <delivered@resend.dev>",
           to: email,
           subject: "You're on the RecoverPay Waitlist!",
           html: `
