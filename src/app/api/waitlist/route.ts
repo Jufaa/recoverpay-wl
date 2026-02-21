@@ -15,12 +15,24 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const waitlistData = {
-      email,
-      subscribedAt: new Date().toISOString(),
-    };
+    if (resend) {
+      const { data: existingContact } = await resend.contacts.get({
+        email,
+      });
 
-    console.log("New waitlist signup:", waitlistData);
+      if (existingContact) {
+        return NextResponse.json(
+          { error: "This email is already registered on the waitlist" },
+          { status: 409 }
+        );
+      }
+
+      await resend.contacts.create({
+        email,
+      });
+    }
+
+    console.log("New waitlist signup:", email);
 
     if (resend) {
       try {
