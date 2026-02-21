@@ -202,6 +202,19 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          <div className="mt-24 max-w-4xl mx-auto">
+            <h2 className="text-2xl font-semibold text-[#F5F5F5] text-center mb-8">
+              See RecoverPay in action
+            </h2>
+            <div className="relative aspect-video bg-[#1A1A1A] border border-[#2F2F2F] rounded-xl overflow-hidden">
+              <img 
+                src="/elgif.gif" 
+                alt="RecoverPay demo" 
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
         </div>
       </main>
 
