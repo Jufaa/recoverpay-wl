@@ -37,9 +37,9 @@ export async function POST(request: NextRequest) {
     if (resend) {
       try {
         await resend.emails.send({
-          from: "RecoverPay waitlist <delivered@resend.dev>",
+          from: "RecoveryPay waitlist <delivered@resend.dev>",
           to: email,
-          subject: "You're on the RecoverPay Waitlist!",
+          subject: "You're on the RecoveryPay Waitlist!",
           html: `
             <!DOCTYPE html>
             <html>
@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
                       <tr>
                         <td style="padding: 40px 40px 20px 40px; text-align: center;">
                           <h1 style="margin: 0; color: #F5F5F5; font-size: 28px; font-weight: 600;">
-                            RecoverPay
+                            RecoveryPay
                           </h1>
                           <p style="margin: 8px 0 0 0; color: #8A8A8A; font-size: 14px;">
                             Automated Payment Recovery
@@ -71,15 +71,15 @@ export async function POST(request: NextRequest) {
                             You're on the list! 🎉
                           </h2>
                           <p style="margin: 0 0 16px 0; color: #CFCFCF; font-size: 16px; line-height: 1.6;">
-                            Thanks for joining the RecoverPay waitlist. We'll notify you as soon as we're ready to launch.
+                            Thanks for joining the RecoveryPay waitlist. We'll notify you as soon as we're ready to launch.
                           </p>
                           
                           <div style="background-color: #121212; border-radius: 8px; padding: 20px; margin: 24px 0;">
                             <p style="margin: 0 0 12px 0; color: #8A8A8A; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">
-                              What is RecoverPay?
+                              What is RecoveryPay?
                             </p>
                             <p style="margin: 0; color: #CFCFCF; font-size: 14px; line-height: 1.6;">
-                              RecoverPay is a SaaS that automatically retries failed Stripe payments using intelligent dunning schedules (1, 3, 7 days). Recover up to 60% of failed payments without manual intervention.
+                              RecoveryPay is a SaaS that automatically retries failed Stripe payments using intelligent dunning schedules (1, 3, 7 days). Recover up to 60% of failed payments without manual intervention.
                             </p>
                           </div>
                           
@@ -93,7 +93,7 @@ export async function POST(request: NextRequest) {
                       <tr>
                         <td style="padding: 20px 40px; border-top: 1px solid #2F2F2F; text-align: center;">
                           <p style="margin: 0; color: #6B6B6B; font-size: 12px;">
-                            © 2026 RecoverPay. All rights reserved.
+                            © 2026 RecoveryPay. All rights reserved.
                           </p>
                         </td>
                       </tr>

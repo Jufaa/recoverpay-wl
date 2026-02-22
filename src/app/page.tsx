@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Toaster, toast } from "sonner";
+import Image from "next/image";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -50,10 +51,10 @@ export default function Home() {
       <header className="border-b border-[#2F2F2F]">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-[#E5E5E5] rounded-lg flex items-center justify-center">
-              <span className="text-[#0A0A0A] font-bold text-sm">R</span>
+            <div className="w-8 h-8 flex items-center justify-center">
+              <Image src="/logo.svg" alt="RecoveryPay logo" width={32} height={32} className="rounded-lg" />
             </div>
-            <span className="text-[#F5F5F5] font-semibold text-lg">RecoverPay</span>
+            <span className="text-[#F5F5F5] font-semibold text-lg">RecoveryPay</span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <a href="#features" className="text-[#CFCFCF] hover:text-[#F5F5F5] text-sm transition-colors">
@@ -77,7 +78,7 @@ export default function Home() {
               Never lose a payment<br className="hidden md:block" /> again
             </h1>
             <p className="text-lg md:text-xl text-[#CFCFCF] max-w-2xl mx-auto">
-              RecoverPay automatically retries failed Stripe payments using intelligent dunning schedules. Recover up to 60% of lost revenue.
+              RecoveryPay automatically retries failed Stripe payments using intelligent dunning schedules. Recover up to 60% of lost revenue.
             </p>
           </div>
 
@@ -128,7 +129,7 @@ export default function Home() {
 
           <div id="features" className="mt-24">
             <h2 className="text-2xl font-semibold text-[#F5F5F5] text-center mb-12">
-              Why RecoverPay?
+              Why RecoveryPay?
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
               <Card className="bg-[#1A1A1A] border-[#2F2F2F]">
@@ -205,12 +206,12 @@ export default function Home() {
 
           <div className="mt-24 max-w-4xl mx-auto">
             <h2 className="text-2xl font-semibold text-[#F5F5F5] text-center mb-8">
-              See RecoverPay in action
+              See RecoveryPay in action
             </h2>
             <div className="relative aspect-video bg-[#1A1A1A] border border-[#2F2F2F] rounded-xl overflow-hidden">
               <img 
                 src="/elgif.gif" 
-                alt="RecoverPay demo" 
+                alt="RecoveryPay demo" 
                 className="w-full h-full object-contain"
               />
             </div>
@@ -221,7 +222,7 @@ export default function Home() {
       <footer className="border-t border-[#2F2F2F] py-8">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <p className="text-[#6B6B6B] text-sm">
-            © 2026 RecoverPay. All rights reserved.
+            © 2026 RecoveryPay. All rights reserved.
           </p>
         </div>
       </footer>
