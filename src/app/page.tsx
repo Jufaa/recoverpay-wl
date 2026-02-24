@@ -78,7 +78,7 @@ export default function Home() {
               Never lose a payment<br className="hidden md:block" /> again
             </h1>
             <p className="text-lg md:text-xl text-[#CFCFCF] max-w-2xl mx-auto">
-              RecoveryPay automatically retries failed Stripe payments using intelligent dunning schedules. Recover up to 60% of lost revenue.
+              Recover up to 60% of failed payments automatically.
             </p>
           </div>
 
